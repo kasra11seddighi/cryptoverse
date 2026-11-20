@@ -1,1 +1,39 @@
 @import "tailwindcss";
+
+@theme {
+  --color-canvas: #070b14;
+  --color-surface: #0d1320;
+  --color-surface-2: #131b2c;
+  --color-line: #1f2a40;
+  --color-ink: #e6ebf5;
+  --color-ink-muted: #8a96ad;
+  --color-accent: #3b82f6;
+  --color-cyan: #22d3ee;
+  --color-gain: #22c55e;
+  --color-loss: #ef4444;
+  --animate-slide-in: slide-in 180ms ease-out;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
